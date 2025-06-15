@@ -13,7 +13,7 @@
     {% endblock %}
 
     {% block corecss %}
-
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
     {% endblock %}
 
@@ -21,6 +21,7 @@
     {% endblock %}
 
     {% block corejs %}
+
     {% endblock %}
 
     {% block extra_js %}
@@ -29,10 +30,32 @@
     <title>WonderShop{% block additional_title %}{% endblock %}</title>
 </head>
 <body>
+<div class="w3-container page-box">
+{% block header %}
+<header class="w3-container">
+    <div id="announcement-bar"> Announcement bar </div>
+    <div id="info-header-bar"> Login | Notifications | Cart </div>
+    <div id="search-bar"> LOGO | Search Box | Search Button</div>
+
+</header>
+{% endblock %}
+
+<!-- messages -->
+{% if messages %}
+    <div class="w3-container">Messages</div>
+{%  endif %}
+<!-- end messages -->
 
 {% block contents %}
     Contents goes here
 {% endblock %}
+
+{% block footer %}
+    <footer class="w3-container footer">
+        Footer
+    </footer>
+{% endblock %}
+</div>
 
 </body>
 </html>

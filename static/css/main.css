@@ -1,6 +1,35 @@
-html{
-    background-color: #f0f0f0;
+*{
     border: 0;
     padding: 0;
     margin: 0;
+    background-color: #fafafa;
+}
+
+.page-box{
+    padding: 0;
+    margin: auto;
+    width: 1200px;
+    border: 1px solid black;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 1200px;
+  margin: auto;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+#announcement-bar{
+
+}
+
+#info-header-bar{
+
+}
+
+#search-bar{
+
 }
