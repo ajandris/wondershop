@@ -5,6 +5,10 @@
     background-color: #fafafa;
 }
 
+p{
+    background-color: inherit;
+}
+
 .page-box{
     padding: 0;
     margin: auto;
@@ -22,14 +26,60 @@
   text-align: center;
 }
 
-#announcement-bar{
+.flat{
+    padding: 0;
+    margin: 0;
+}
 
+#announcement-bar{
+    background-color: saddlebrown;
+    color: antiquewhite;
+    font-weight: bold;
+    padding: 12px;
+    margin: 0;
+    height: 50px;
 }
 
 #info-header-bar{
-
+    background-color: yellowgreen;
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    margin: 0;
+    height: 50px;
 }
 
 #search-bar{
 
+}
+
+/* -- Screen sizes are W3css responsiveness screen sizes --*/
+
+@media screen and (max-width: 1200px){
+    /* -- desktop screen with a box size 1200px --*/
+    .page-box{
+        width: 994px;
+    }
+    .footer{
+        width: 994px;
+    }
+}
+
+@media screen and (max-width: 993px){
+    /* -- tablet screen --*/
+    .page-box{
+        width: 661px;
+    }
+    .footer{
+        width: 661px;
+    }
+}
+@media screen and (max-width: 660px) {
+    /*  for mobile screens*/
+    .page-box{
+        width: 440px;
+    }
+    .footer{
+        width: 440px;
+    }
 }
