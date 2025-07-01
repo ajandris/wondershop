@@ -13,6 +13,14 @@
     {% block extra_meta %}
     {% endblock %}
 
+    {% block fonts %}
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&
+            family=Montserrat:ital,wght@0,100..900;1,100..900&
+            display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&
+            display=swap" rel="stylesheet">
+    {% endblock fonts %}
+
     {% block corecss %}
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
         <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
@@ -34,9 +42,19 @@
 <div class="w3-container page-box">
 {% block header %}
 <header class="w3-container flat">
-    <div id="announcement-bar"><p>Announcement bar</p></div>
-    <div id="info-header-bar"> Login | Notifications | Cart </div>
-    <div id="search-bar"> LOGO | Search Box | Search Button</div>
+    <div id="announcement-bar"><p>Free delivery on orders over £50</p></div>
+    <div id="info-header-bar">
+        <p>
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'account_logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'account_login' %}">Login</a>
+                <a href="{% url 'account_signup' %}">Register</a>
+        {% endif %}
+        | Notifications | Cart
+        </p>
+    </div>
+    <div id="search-bar"><p> LOGO | Search Box | Search Button </p></div>
 
 </header>
 {% endblock %}

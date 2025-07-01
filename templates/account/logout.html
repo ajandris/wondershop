@@ -1,9 +1,10 @@
-{% extends "account/base_manage.html" %}
+{% extends "base.html" %}
 {% load allauth i18n %}
 {% block head_title %}
     {% trans "Sign Out" %}
 {% endblock head_title %}
-{% block content %}
+{% block contents %}
+    <div class="allauth-page">
     {% element h1 %}
         {% trans "Sign Out" %}
     {% endelement %}
@@ -17,9 +18,12 @@
             {{ redirect_field }}
         {% endslot %}
         {% slot actions %}
+            <div class="allauth-submit-button-wrapper">
             {% element button type="submit" %}
                 {% trans 'Sign Out' %}
             {% endelement %}
+            </div>
         {% endslot %}
     {% endelement %}
-{% endblock content %}
+    </div>
+{% endblock contents %}

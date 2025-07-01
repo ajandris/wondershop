@@ -5,8 +5,97 @@
     background-color: #fafafa;
 }
 
-p{
+h1, h2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+p, input, label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
     background-color: inherit;
+}
+
+label{
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+input[type=text]{
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #fafafa;
+    border-bottom: 1px solid darkcyan;
+}
+
+input[type=email]{
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #fafafa;
+    border-bottom: 1px solid darkcyan;
+}
+
+
+input[type=password]{
+    width: 100%;
+    border-bottom: 1px solid darkcyan;
+    background-color: #fafafa;
+}
+
+form{
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+button{
+    background-color: darkgreen;
+    color: antiquewhite;
+    font-weight: 500;
+    padding: 4px 10px 4px 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 13px;
+}
+
+header p{
+    font-family: "Noto Serif", sans-serif;
+    font-size: 1.1em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: inherit;
+}
+
+
+.allauth-page{
+    text-align: center;
+}
+
+.allauth-submit-button-wrapper{
+    width: 100%;
+    text-align: center;
+}
+
+.allauth-page ul{
+    padding-left: 15px;
+}
+
+.errorlist {
+    background-color: red;
+}
+
+.errorlist li{
+    background-color: red;
+    font-weight: bold;
+    color: white;
 }
 
 .page-box{
@@ -34,12 +123,14 @@ p{
 #announcement-bar{
     background-color: saddlebrown;
     color: antiquewhite;
-    font-weight: bold;
     padding: 12px;
     margin: 0;
     height: 50px;
 }
 
+#announcement-bar p{
+    font-weight: 600;
+}
 #info-header-bar{
     background-color: yellowgreen;
     color: black;
