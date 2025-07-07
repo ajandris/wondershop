@@ -21,6 +21,8 @@ def can_proceed(request, role):
 
 @login_required
 def index(request):
+    can_proceed(request, 'DataAdmin')
+
     template = 'dataadmin/index.html'
     context = {}
 
