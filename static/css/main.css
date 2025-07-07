@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     background-color: #fafafa;
+    box-sizing: border-box;
 }
 
 h1, h2 {
@@ -28,6 +29,7 @@ label{
 }
 
 input[type=text]{
+    outline: none;
     width: 100%;
     font-size: 1.2em;
     background-color: #fafafa;
@@ -35,21 +37,22 @@ input[type=text]{
 }
 
 input[type=email]{
+    outline: none;
     width: 100%;
     font-size: 1.2em;
     background-color: #fafafa;
     border-bottom: 1px solid darkcyan;
 }
 
-
 input[type=password]{
+    outline: none;
     width: 100%;
     border-bottom: 1px solid darkcyan;
     background-color: #fafafa;
 }
 
 form{
-    width: 60%;
+    width: 70%;
     margin: auto;
     padding: 10px;
     text-align: left;
@@ -74,6 +77,40 @@ header p{
     background-color: inherit;
 }
 
+.basket{
+    background-color: inherit;
+    font-size: 1.1em;
+}
+
+.notifications-bell{
+    background-color: inherit;
+    font-size: 1.1em;
+}
+
+.logo{
+    background-color: darkgreen;
+    color: gold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.wrapper-in-header{
+    background-color: inherit;
+}
+
+.search-button{
+    float: left;
+    padding: 5px;
+    background: #fafafa;
+    color: green;
+    width: 200%;
+    font-size: 15.5px;
+    cursor: pointer;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 0 10px 10px 0;
+}
 
 .allauth-page{
     text-align: center;
@@ -98,6 +135,25 @@ header p{
     color: white;
 }
 
+/* Autofill input boxes - source: https://iifx.dev/en/articles/527517 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #333; /* Text color */
+  -webkit-box-shadow: 0 0 0 1000px #fafafa inset; /* Background color */
+  background-image: none; /* Required to remove yellow */
+  background-color: #fafafa; /* Background color */
+  border: 1px solid #ccc; /* Border style */
+}
+
+/* EOF autofill input boxes */
+
 .page-box{
     padding: 0;
     margin: auto;
@@ -110,7 +166,7 @@ header p{
   bottom: 0;
   width: 1200px;
   margin: auto;
-  background-color: red;
+  background-color: #3a3a3a;
   color: white;
   text-align: center;
 }
@@ -121,56 +177,98 @@ header p{
 }
 
 #announcement-bar{
-    background-color: saddlebrown;
+    background-color: #3a3a3a;
     color: antiquewhite;
-    padding: 12px;
+    padding: 7px;
     margin: 0;
-    height: 50px;
+}
+
+#announcement-bar div{
+    background-color: inherit;
 }
 
 #announcement-bar p{
     font-weight: 600;
 }
+
+#announcement-bar a{
+    text-decoration: none;
+}
+
+#announcement-bar a:hover{
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+
 #info-header-bar{
     background-color: yellowgreen;
     color: black;
-    font-weight: bold;
-    padding: 12px;
+    padding: 7px 5px 0 7px;
     margin: 0;
-    height: 50px;
 }
 
-#search-bar{
-
+#info-header-bar form{
+    width: 100%;
 }
+
+#info-header-bar p {
+    font-weight: 600;
+    background-color: inherit;
+}
+
+#header-search input[type=text]{
+    font-size: 17px;
+    border: 1px solid grey;
+    padding-left: 10px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 10px 0 0 10px;
+    margin: 0 auto 0 auto;
+}
+
+#header-search button{
+    background-color: inherit;
+    padding: 0;
+    margin: 0 auto 0 auto;
+}
+
+#bell-and-basket-wrapper{
+    padding-top: 10px;
+}
+
 
 /* -- Screen sizes are W3css responsiveness screen sizes --*/
 
 @media screen and (max-width: 1200px){
     /* -- desktop screen with a box size 1200px --*/
     .page-box{
-        width: 994px;
+        width: 980px;
     }
     .footer{
-        width: 994px;
+        width: 980px;
     }
 }
 
 @media screen and (max-width: 993px){
     /* -- tablet screen --*/
     .page-box{
-        width: 661px;
+        width: 95%;
     }
     .footer{
-        width: 661px;
+        width: 95%;
     }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 664px) {
     /*  for mobile screens*/
     .page-box{
-        width: 440px;
+        width: 100%;
     }
     .footer{
-        width: 440px;
+        width: 100%;
+    }
+    #header-search input[type=text]{
+        width: 80%;
     }
 }
