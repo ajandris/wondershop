@@ -27,6 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DEBUG', False))
 
+DEBUG = False    # development only
+
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(',')
 
 
@@ -141,6 +143,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = ''
+STATICFILES_DIRS = []
 
 if DEBUG:
     STATICFILES_DIRS = [

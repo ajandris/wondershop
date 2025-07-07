@@ -1,11 +1,13 @@
-{% extends "account/base_entrance.html" %}
+{% extends "base.html" %}
 {% load i18n %}
 {% load account %}
 {% load allauth %}
 {% block head_title %}
     {% trans "Confirm Email Address" %}
 {% endblock head_title %}
-{% block content %}
+{% block contents %}
+    <div class="allauth-page">
+
     {% element h1 %}
         {% trans "Confirm Email Address" %}
     {% endelement %}
@@ -18,11 +20,13 @@
             {% url 'account_confirm_email' confirmation.key as action_url %}
             {% element form method="post" action=action_url %}
                 {% slot actions %}
+                <div class="allauth-submit-button-wrapper">
                     {% csrf_token %}
                     {{ redirect_field }}
                     {% element button type="submit" %}
                         {% trans 'Confirm' %}
                     {% endelement %}
+                </div>
                 {% endslot %}
             {% endelement %}
         {% else %}
@@ -36,4 +40,5 @@
             {% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}
         {% endelement %}
     {% endif %}
-{% endblock content %}
+    </div>
+{% endblock contents %}

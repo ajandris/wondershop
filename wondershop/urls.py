@@ -20,12 +20,16 @@ from django.urls import path, include
 
 from . import settings
 
+# Custom error 404 (Page not found)
+handler404 = 'main.errors.custom_404'
+# Custom error 403 (Permission denied)
+handler403 = 'main.errors.custom_403'
 
 urlpatterns = [
-    path('', include('main.urls')),
+    path('da/', include('dataadmin.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('da/', include('dataadmin.urls')),
+    path('', include('main.urls')),
 ]
 
 

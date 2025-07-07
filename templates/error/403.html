@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="15; url={% url 'home' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <title>Error 403 | WonderShop</title>
+</head>
+<body>
+<div class="contents w3-center">
+    <div class="w3-container">
+        <h1>Permission Denied - Error 403</h1>
+    </div>
+    <div class="w3-container w3-center">
+        <a href="{% url 'home' %}" class="w3-button w3-dark-grey w3-hover-green
+        w3-text-white w3-text-bold">Shop here</a>
+    </div>
+</div>
+
+</body>
+</html>

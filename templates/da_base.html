@@ -68,7 +68,7 @@
     </div>
     <div id="info-header-bar" class="w3-row">
         <div class="w3-col l2 m3 s4 wrapper-in-header">
-            <a href="/da"><span class="w3-badge da-logo w3-align-left">WS<br/>&nbsp;&nbsp;DataAdmin&nbsp;&nbsp;</span></a>
+            <a href="{% url 'data-admin-home' %}"><span class="w3-badge da-logo w3-align-left">WS<br/>&nbsp;&nbsp;DataAdmin&nbsp;&nbsp;</span></a>
         </div>
         <div class="w3-center w3-col l9 m8 s6 wrapper-in-header">
                 <form action="{% url 'da-search' %}" method="post" class="wrapper-in-header" id="header-search">
