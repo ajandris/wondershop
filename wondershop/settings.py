@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'fontawesomefree',
 
     'main',
+    'dataadmin',
 ]
 
 MIDDLEWARE = [

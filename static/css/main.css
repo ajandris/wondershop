@@ -94,6 +94,14 @@ header p{
     margin-bottom: 10px;
 }
 
+.da-logo{
+    background-color: darkgreen;
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
 .wrapper-in-header{
     background-color: inherit;
 }

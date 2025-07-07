@@ -8,6 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex">
     {% endblock %}
 
     {% block extra_meta %}
@@ -41,7 +43,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>WonderShop{% block additional_title %}{% endblock %}</title>
+    <title>WonderShop{% block additional_title %} | Data Admin{% endblock %}</title>
 </head>
 <body>
 <div class="w3-container page-box">
@@ -49,7 +51,7 @@
 <header class="w3-container flat">
     <div id="announcement-bar" class="w3-row">
         <div class="w3-col l9 m8 s7">
-            <p>Free delivery on orders over £50</p>
+            <p>&nbsp;</p>
         </div>
         <div class="w3-col l3 m4 s5">
             <div class="w3-right">
@@ -66,18 +68,19 @@
     </div>
     <div id="info-header-bar" class="w3-row">
         <div class="w3-col l2 m3 s4 wrapper-in-header">
-            <a href="/"><span class="w3-badge logo w3-align-left">&nbsp;&nbsp;Wonder&nbsp;&nbsp;<br/>Shop</span></a>
+            <a href="/da"><span class="w3-badge da-logo w3-align-left">WS<br/>&nbsp;&nbsp;DataAdmin&nbsp;&nbsp;</span></a>
         </div>
         <div class="w3-center w3-col l9 m8 s6 wrapper-in-header">
-                <form action="{% url 'search' %}" method="get" class="wrapper-in-header" id="header-search">
+                <form action="{% url 'da-search' %}" method="post" class="wrapper-in-header" id="header-search">
                     <input type="text" value="{{ search_criteria }}" minlength="3" id="top_search"
                            name="q" placeholder="Search ...">
+                    {% csrf_token %}
                     <button type="submit"><i class="fa fa-search search-button"></i></button>
                 </form>
         </div>
         <div class="w3-col l1 m1 s1 w3-right wrapper-in-header">
             <div class="w3-right wrapper-in-header" id="bell-and-basket-wrapper">
-                <i class="fa-regular fa-bell notifications-bell"></i> <i class="fa-solid fa-cart-shopping basket"></i>
+                <i class="fa-regular fa-bell notifications-bell"></i>
             </div>
         </div>
     </div>
