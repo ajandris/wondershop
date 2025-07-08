@@ -1,0 +1,337 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+p, input, label{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    background-color: inherit;
+}
+
+label{
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+input[type=text]{
+    outline: none;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #fafafa;
+    border-bottom: 1px solid darkcyan;
+}
+
+input[type=email]{
+    outline: none;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #fafafa;
+    border-bottom: 1px solid darkcyan;
+}
+
+input[type=password]{
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid darkcyan;
+    background-color: #fafafa;
+}
+
+form{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+button{
+    background-color: darkgreen;
+    color: antiquewhite;
+    font-weight: 500;
+    padding: 4px 10px 4px 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 13px;
+}
+
+header p{
+    font-family: "Noto Serif", sans-serif;
+    font-size: 1.1em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: inherit;
+}
+
+span{
+    background-color: inherit;
+}
+
+.basket{
+    background-color: inherit;
+    font-size: 1.1em;
+}
+
+.notifications-bell{
+    background-color: inherit;
+    font-size: 1.1em;
+}
+
+.profile-symbol{
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+.logo{
+    background-color: darkgreen;
+    color: gold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.da-logo{
+    background-color: darkgreen;
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.wrapper-in-header{
+    background-color: inherit;
+}
+
+.search-button{
+    float: left;
+    padding: 5px;
+    background: #fafafa;
+    color: green;
+    width: 200%;
+    font-size: 15.5px;
+    cursor: pointer;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 0 10px 10px 0;
+}
+
+.allauth-page{
+    text-align: center;
+}
+
+.allauth-submit-button-wrapper{
+    width: 100%;
+    text-align: center;
+}
+
+.allauth-page ul{
+    padding-left: 15px;
+}
+
+.errorlist {
+    background-color: red;
+}
+
+.errorlist li{
+    background-color: red;
+    font-weight: bold;
+    color: white;
+}
+
+/* Autofill color of input boxes - source: https://iifx.dev/en/articles/527517 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #333; /* Text color */
+  -webkit-box-shadow: 0 0 0 1000px #fafafa inset; /* Background color */
+  background-image: none; /* Required to remove yellow */
+  background-color: #fafafa; /* Background color */
+  border: 1px solid #ccc; /* Border style */
+}
+
+/* EOF autofill input boxes */
+
+.page-box{
+    padding: 0;
+    margin: auto;
+    width: 1200px;
+    border: 1px solid black;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 1200px;
+  margin: auto;
+  background-color: #3a3a3a;
+  color: white;
+  text-align: center;
+}
+
+.flat{
+    padding: 0;
+    margin: 0;
+}
+
+#announcement-bar{
+    background-color: #3a3a3a;
+    color: antiquewhite;
+    padding: 7px;
+    margin: 0;
+}
+
+#announcement-bar div{
+    background-color: inherit;
+}
+
+#announcement-bar p{
+    font-weight: 600;
+}
+
+#announcement-bar a{
+    text-decoration: none;
+}
+
+#info-header-bar{
+    background-color: yellowgreen;
+    color: black;
+    padding: 7px 5px 0 7px;
+    margin: 0;
+}
+
+#info-header-bar form{
+    width: 100%;
+}
+
+#info-header-bar p {
+    font-weight: 600;
+    background-color: inherit;
+}
+
+#header-search input[type=text]{
+    font-size: 17px;
+    border: 1px solid grey;
+    padding-left: 10px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 10px 0 0 10px;
+    margin: 0 auto 0 auto;
+}
+
+#header-search button{
+    background-color: inherit;
+    padding: 0;
+    margin: 0 auto 0 auto;
+}
+
+#bell-and-basket-wrapper{
+    padding-top: 10px;
+}
+
+/**
+ *    Profile Dropdown
+ *    source: https://www.w3schools.com/css/css_examples.asp (Right Aligned Dropdown Menu)
+*/
+
+
+.dropbtn {
+    padding: 0;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    background-color: yellowgreen;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover{
+    background-color: #3a3a3a;
+    color: antiquewhite;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-icon{
+    background-color: transparent;
+}
+
+/* --- EOF Profile Dropdown ---*/
+
+
+/* -- Screen sizes are W3css responsiveness screen sizes --*/
+
+@media screen and (max-width: 1200px){
+    /* -- desktop screen with a box size 1200px --*/
+    .page-box{
+        width: 980px;
+    }
+    .footer{
+        width: 980px;
+    }
+}
+
+@media screen and (max-width: 993px){
+    /* -- tablet screen --*/
+    .page-box{
+        width: 95%;
+    }
+    .footer{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 664px) {
+    /*  for mobile screens*/
+    .page-box{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+    #header-search input[type=text]{
+        width: 80%;
+    }
+}

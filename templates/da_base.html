@@ -30,7 +30,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'site/css/main.css' %}" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -55,14 +55,21 @@
         </div>
         <div class="w3-col l3 m4 s5">
             <div class="w3-right">
-                <p>
-                    {% if request.user.is_authenticated %}
-                        Greetings, {{ request.user }}! <a href="{% url 'account_logout' %}">Logout</a>
-                    {% else %}
-                        <a href="{% url 'account_login' %}">Login</a> /
-                        <a href="{% url 'account_signup' %}">Register</a>
-                    {% endif %}
-                </p>
+               <div class="dropdown">
+                  <div class="dropbtn">Greetings, {{ request.user }}! <i class="fas fa-user profile-symbol"></i></div>
+                  <div class="dropdown-content">
+                      <a href="#">
+                          <i class="fa fa-user menu-icon"></i> Profile</a>
+                          <a href="{% url 'home' %}">
+                              <i class="fa fa-house menu-icon"></i> Visit Site</a>
+                      {% if user.is_superuser %}
+                          <a href="{% url 'admin:index' %}">
+                              <i class="fas fa-user-cog menu-icon"></i> Site Administration</a>
+                      {% endif %}
+                      <a href="{% url 'account_logout' %}">
+                          <i class="fa fa-sign-out menu-icon"></i> Logout</a>
+                  </div>
+               </div>
             </div>
         </div>
     </div>
