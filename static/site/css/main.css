@@ -81,6 +81,18 @@ span{
     background-color: inherit;
 }
 
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.active-menu{
+    background-color: darkgreen;
+}
+
 .basket{
     background-color: inherit;
     font-size: 1.1em;
@@ -300,6 +312,7 @@ select:-webkit-autofill:focus {
 }
 
 /* --- EOF Profile Dropdown ---*/
+
 
 
 /* -- Screen sizes are W3css responsiveness screen sizes --*/

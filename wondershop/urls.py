@@ -27,7 +27,7 @@ handler403 = 'main.errors.custom_403'
 
 urlpatterns = [
     path('da/', include('dataadmin.urls')),
-    path('admin/', admin.site.urls),
+    path('this-is-admin-site/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('main.urls')),
 ]
