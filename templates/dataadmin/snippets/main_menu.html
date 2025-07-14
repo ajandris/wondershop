@@ -1,14 +1,20 @@
-
-<div class="w3-container w3-black no-padding no-margin w3-border">
-        <a href="#" class="w3-button  w3-green w3-hover-light-green no-margin">Home</a>
+<div class="w3-container w3-asphalt font-0">
+    <a href="{% url 'data-admin-home' %}" class="w3-button w3-hover-light-green font-16
+                        {% if current_menu == 'home' %}{{ background }}{% else %}w3-green{% endif %}
+                        ">Home</a>
     <!-- product -->
-    <div class="w3-dropdown-hover w3-bar-block no-margin">
-          <div class="w3-btn w3-black w3-hover-light-green no-margin">Product <i class="fa fa-caret-down menu-icon"></i></div>
-          <div class="w3-dropdown-content w3-card-4 no-margin">
-            <a href="cat" class="w3-button w3-bar-item w3-hover-light-green">Categories</a>
-            <a href="pro" class="w3-button w3-bar-item w3-hover-light-green">Products</a>
+    <div class="w3-dropdown-hover w3-bar-block">
+          <div class="w3-btn w3-hover-light-green
+                        {% if current_menu == 'products' %}{{ background }}{% else %}w3-green{% endif %}
+                    font-16">Product <i class="fa fa-caret-down menu-icon"></i></div>
+          <div class="w3-dropdown-content w3-card-4">
+            <a href="cat" class="w3-button w3-bar-item w3-hover-light-green font-16">Categories</a>
+            <a href="pro" class="w3-button w3-bar-item w3-hover-light-green font-16">Products</a>
           </div>
     <!-- eof product -->
-        </div>
-        <a href="#" class="w3-button w3-black w3-hover-light-green">Orders</a>
+    </div>
+    <a href="#" class="w3-bar-item w3-button
+                        {% if current_menu == 'orders' %}{{ background }}{% else %}w3-green{% endif %}
+                       w3-hover-light-green no-margin font-16">Orders</a>
 </div>
+

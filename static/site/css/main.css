@@ -82,15 +82,11 @@ span{
 }
 
 .no-margin{
-    margin: 0;
+    margin: 0 !important;
 }
 
 .no-padding{
-    padding: 0;
-}
-
-.active-menu{
-    background-color: darkgreen;
+    padding: 0 !important;
 }
 
 .basket{
@@ -205,6 +201,18 @@ select:-webkit-autofill:focus {
     margin: 0;
 }
 
+
+.font-0{        /* -- tweak for menu - removes space between inline blocks --*/
+    font-size: 0;
+    padding: 0;
+    background-color: black;
+    width: 100%;
+}
+
+.font-16{
+    font-size: 16px;
+}
+
 #announcement-bar{
     background-color: #3a3a3a;
     color: antiquewhite;
@@ -265,7 +273,6 @@ select:-webkit-autofill:focus {
  *    Profile Dropdown
  *    source: https://www.w3schools.com/css/css_examples.asp (Right Aligned Dropdown Menu)
 */
-
 
 .dropbtn {
     padding: 0;

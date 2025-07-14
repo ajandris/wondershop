@@ -6,6 +6,16 @@ from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 
+def get_menu_color(menu_name):
+    """
+    Returns the color for the menu - active or default color
+    """
+    menu = ['home', 'products', 'orders',]
+    if menu_name in menu:
+        return 'w3-emerald'
+    return ' w3-red'
+
+
 def can_proceed(request, role):
     """
     Check if user has necessary role and is allowed to proceed
@@ -15,17 +25,22 @@ def can_proceed(request, role):
 
     if not user.groups.filter(name=role).exists():
         raise PermissionDenied('Permission denied')
-
     return True
 
 
 @login_required
 def index(request):
+    """
+    Data Administration home page (dashboard)
+    """
     can_proceed(request, 'DataAdmin')
 
     template = 'dataadmin/index.html'
-    context = {}
-
+    current_menu = 'home'
+    context = {
+        'background': get_menu_color(current_menu),
+        'current_menu': current_menu
+    }
     return render(request, template, context)
 
 
